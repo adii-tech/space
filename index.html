@@ -13,35 +13,91 @@
       }
       header {
         color: rgba(112, 173, 223, 0.562);
-        background-color: rgba(69, 161, 204, 0.274);
+        background-color: rgba(69, 161, 204, 0.46);
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        padding: 1px;
+        padding:0.1vw;
+        position:sticky;
+        top: 0;
+        z-index: 1;
+      }
+      header hr {
+            position: relative;
+            top: 1.4vw;
+      }
+      header ul span {
+            position: relative;
+            top: .3vw;
+            left: -3.2vw;
       }
       .container {
-        margin-top: 45px;
-        margin-left: 20px;
+        margin-top: 4.5vw;
+        margin-left: 2vw;
       }
       a {
         background-color: #481f1b;
         font-family: -webkit-pictograph;
       }
-      button {
-        border-radius: 7px;
-        border-width: 3px;
-        cursor: pointer;
-        margin-bottom: 50px;
+      .butto{
+        position: relative;
+        top: 1.5vw;
+        right: -.4vw;
+      }  
+      
+      .sec{
+        margin-bottom: 5vw;
       }
       h1 {
         color: ivory;
       }
       span {
-        margin-left: 17px;
+        margin-left: 1.7vw;
         cursor: pointer;
       }
     
       .z{
-           margin-bottom: 200px;
+           margin-bottom: 20vw;
       }
+     .im{ 
+         margin-bottom: 5.6vw;
+       }
+       .im img{ 
+           position: relative;
+           left: 28vw;
+           max-width: 37%;
+           max-height: 31%;
+       }
+       
+       img{ 
+         height: 920px;
+         transition-property:height;
+         transition-duration: 5s;
+         transition-timing-function: ease-in;
+        } 
+        img:hover{
+           
+           height:200px;
+       }
+      .cha{
+        position: relative; 
+        top:   3.9vw;
+        right: -3vw;
+       }
+       #ch{
+        padding: .8% 0.6%;
+        text-align: center;
+        font-size: 1rem;
+       }
+       /* #ch b {
+            font-size: 1rem;
+       } */
+       img{
+        max-width: 10%;
+        height: auto;
+       }
+       /* *{
+        margin: 0;
+        padding: 0;
+       } */
     </style>
   </head>
 
@@ -53,8 +109,10 @@
         <span>Services</span>
         <span>Support </span>
       </ul>
+
+      <hr />
     </header>
-    <hr />
+    
     <main>
       <h1 style="text-align: center">Welcome to Space</h1>
       <div class="z">
@@ -86,13 +144,31 @@
           planets and some smaller bodies are encircled by planetary rings of
           ice, dust and moonlets.
         </p>
-        <div style="text-align: center;">
+        <div class="im">
         <img
+        id="iim"
+          class="imgg"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/1920px-Planets2013.svg.png"
           alt="Solar system"
           height="290"
           width="900"
         />
+        <img id="ab" style="display: none;"
+            src="photo-1490730141103-6cac27aaab94.avif"
+            alt="SpaceX logo"
+            height="290"
+            width="900"
+          />
+          <img style="display:none ;"
+          id="iim2"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/1920px-Planets2013.svg.png"
+            alt="Solar system"
+            height="290"
+            width="900"
+          />
+          <a class="cha">
+            <button id="ch" style="width: 10%;"><b>Change Image</b></button>
+          </a>
         </div>
         <p style="color: rgba(255, 240, 245, 0.582)">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius
@@ -128,7 +204,7 @@
           Ullam inventore rerum totam?
         </p>
       </div>
-      <section>
+      <section class="sec">
         <!-- <div style="background-image: url('https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029__340.jpg');"> -->
           
         <div class="container">
@@ -147,31 +223,30 @@
             src="ISRO_Logo_PNG_Image_m4vwo3.png"
             alt="ISRO logo"
             height="95"
-            style="margin-left: 20px"
+            style="margin-left: 2vw"
           />
         </div>
           
-        <a
+        <a class="butto"
           href="https://www.nasa.gov/content/live-coverage-of-the-james-webb-space-telescope-mission"
           target="_blank"
-          style="margin-left: 50px"
-          ><button id="click">Nasa</button></a
+          style="margin-left: 4.6vw"
+          ><button style="cursor: pointer;" >Nasa</button></a
         >
-        <a
+        <a class="butto"
           href="https://www.spacex.com/"
           target="_blank"
-          style="margin-left: 160px"
-          ><button>SpaceX</button></a
+          style="margin-left: 8vw"
+          ><button style="cursor: pointer;" >SpaceX</button></a
         >
-        <a
+        <a class="butto"
           href="https://www.isro.gov.in/"
           target="_blank"
-          style="margin-left: 149px"
-          ><button>ISRO</button></a
-        >
+          style="margin-left: 7.8vw"
+          ><button style="cursor: pointer;" >ISRO</button></a>
       </section>
     </main>
-
+     <script src="index.js"></script>
     <footer>
       <ul style="color: lightgray">
         <span>facebook</span>
